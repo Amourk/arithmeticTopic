@@ -10,7 +10,22 @@ public class demo1 {
 
     }
     public boolean Find(int target, int [][] array) {
-
+        for (int i = 0; i <array.length; i++) {
+            //二分
+            //递增 有规律 查找 使用二分
+            int left = 0;
+            int right = array[i].length;
+            while (left<=right){
+                int mid = (left+right)/2;
+                if (target<array[i][mid]){
+                    right = mid-1;
+                }else if (target>array[i][mid]){
+                    left = mid +1;
+                }else {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 }
