@@ -7,20 +7,20 @@ class TwoThreadWaitNotify {
     private boolean flag = false;
 
     public static void main(String[] args) {
-//        ListNode a = new ListNode(1);
-//        ListNode b = new ListNode(2);
-//        ListNode c = new ListNode(3);
-//        ListNode d = new ListNode(4);
-//        ListNode e = new ListNode(5);
-//        a.next = b;
-//        b.next = c;
-//        c.next = d;
-//        d.next = e;
-//        new Solution().ReverseList(a);
-//        while (e != null) {
-//            System.out.println(e.val);
-//            e = e.next;
-//        }
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(2);
+        ListNode c = new ListNode(3);
+        ListNode d = new ListNode(4);
+        ListNode e = new ListNode(5);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        new Solution().ReverseList(a);
+        while (e != null) {
+            System.out.println(e.val);
+            e = e.next;
+        }
 //        int nums[] = {1,2,3,4,5,6,7,9,10};
 //        search(nums,13);
 //        mySqrt(2147395599);
@@ -41,8 +41,8 @@ class TwoThreadWaitNotify {
 //        String json = "{\"customerCode\":20012}";
 //        String str[] ={"aca","cba"};
 //        longestCommonPrefix(str);
-        int str[] = {7 ,1, 5, 6, 3};
-        maxProfitNew(str);
+//        int str[] = {7 ,1, 5, 6, 3};
+//        maxProfitNew(str);
 
 
     }
@@ -56,20 +56,20 @@ class TwoThreadWaitNotify {
     }
     public static class Solution {
 
-        public ListNode ReverseList(ListNode head) {
+        public ListNode ReverseList(ListNode listNode) {
 
             ListNode next = null;
             ListNode pre = null;
 
-            while (head != null) {
+            while (listNode != null) {
                 // 保存要反转到头的那个节点
-                next = head.next;
+                next = listNode.next;
                 // 要反转的那个节点指向已经反转的上一个节点(备注:第一次反转的时候会指向null)
-                head.next = pre;
+                listNode.next = pre;
                 // 上一个已经反转到头部的节点
-                pre = head;
+                pre = listNode;
                 // 一直向链表尾走
-                head = next;
+                listNode = next;
             }
             return pre;
         }
