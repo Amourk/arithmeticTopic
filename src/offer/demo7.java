@@ -17,7 +17,7 @@ public class demo7 {
         int num0 = 0;
         int num1 = 1;
         int result = 0;
-        for (int i = 2;i<n;i++){
+        for (int i = 2;i<=n;i++){
             result = num0+num1;
             num0 = num1;
             num1 = result;
