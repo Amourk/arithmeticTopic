@@ -61,6 +61,8 @@ class TwoThreadWaitNotify {
             ListNode next = null;
             ListNode pre = null;
 
+            //1->2->3->4
+
             while (listNode != null) {
                 // 保存要反转到头的那个节点
                 next = listNode.next;
